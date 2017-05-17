@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170517 11:11:17.247" generator="Robot 3.0.2 (Python 2.7.13 on win32)">
+<suite source="C:\Users\Kogentix\Documents\TestRobot-master\login_tests\gherkin_login.robot" id="s1" name="Gherkin Login">
+<test id="s1-t1" name="Valid Login">
+<kw name="Given browser is opened to login page">
+<kw name="Open Browser To Login Page" library="resource">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170517 11:11:17.388" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:7272/'</msg>
+<status status="PASS" endtime="20170517 11:11:21.766" starttime="20170517 11:11:17.388"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20170517 11:11:22.949" starttime="20170517 11:11:21.766"></status>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" endtime="20170517 11:11:22.949" starttime="20170517 11:11:22.949"></status>
+</kw>
+<kw name="Login Page Should Be Open" library="resource">
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals `title`.</doc>
+<arguments>
+<arg>Login Page</arg>
+</arguments>
+<msg timestamp="20170517 11:11:22.949" level="INFO">Page title is 'Login Page'.</msg>
+<status status="PASS" endtime="20170517 11:11:22.949" starttime="20170517 11:11:22.949"></status>
+</kw>
+<status status="PASS" endtime="20170517 11:11:22.949" starttime="20170517 11:11:22.949"></status>
+</kw>
+<status status="PASS" endtime="20170517 11:11:22.949" starttime="20170517 11:11:17.388"></status>
+</kw>
+<status status="PASS" endtime="20170517 11:11:22.949" starttime="20170517 11:11:17.388"></status>
+</kw>
+<kw name="When user &quot;demo&quot; logs in with password &quot;mode&quot;">
+<kw name="Input Username" library="resource">
+<arguments>
+<arg>${username}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>username_field</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20170517 11:11:22.965" level="INFO">Typing text 'demo' into text field 'username_field'</msg>
+<status status="PASS" endtime="20170517 11:11:23.080" starttime="20170517 11:11:22.949"></status>
+</kw>
+<status status="PASS" endtime="20170517 11:11:23.080" starttime="20170517 11:11:22.949"></status>
+</kw>
+<kw name="Input Password" library="resource">
+<arguments>
+<arg>${password}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>password_field</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20170517 11:11:23.081" level="INFO">Typing text 'mode' into text field 'password_field'</msg>
+<status status="PASS" endtime="20170517 11:11:23.183" starttime="20170517 11:11:23.081"></status>
+</kw>
+<status status="PASS" endtime="20170517 11:11:23.184" starttime="20170517 11:11:23.080"></status>
+</kw>
+<kw name="Submit Credentials" library="resource">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>login_button</arg>
+</arguments>
+<msg timestamp="20170517 11:11:23.186" level="INFO">Clicking button 'login_button'.</msg>
+<status status="PASS" endtime="20170517 11:11:23.297" starttime="20170517 11:11:23.185"></status>
+</kw>
+<status status="PASS" endtime="20170517 11:11:23.297" starttime="20170517 11:11:23.184"></status>
+</kw>
+<status status="PASS" endtime="20170517 11:11:23.297" starttime="20170517 11:11:22.949"></status>
+</kw>
+<kw name="Then welcome page should be open" library="resource">
+<kw name="Location Should Be" library="Selenium2Library">
+<doc>Verifies that current URL is exactly `url`.</doc>
+<arguments>
+<arg>${WELCOME URL}</arg>
+</arguments>
+<msg timestamp="20170517 11:11:23.308" level="INFO">Current location is 'http://localhost:7272/welcome.html'.</msg>
+<status status="PASS" endtime="20170517 11:11:23.308" starttime="20170517 11:11:23.298"></status>
+</kw>
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals `title`.</doc>
+<arguments>
+<arg>Welcome Page</arg>
+</arguments>
+<msg timestamp="20170517 11:11:23.313" level="INFO">Page title is 'Welcome Page'.</msg>
+<status status="PASS" endtime="20170517 11:11:23.314" starttime="20170517 11:11:23.308"></status>
+</kw>
+<status status="PASS" endtime="20170517 11:11:23.314" starttime="20170517 11:11:23.298"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170517 11:11:26.442" starttime="20170517 11:11:23.315"></status>
+</kw>
+<status status="PASS" endtime="20170517 11:11:26.442" critical="yes" starttime="20170517 11:11:17.388"></status>
+</test>
+<doc>A test suite with a single Gherkin style test.
+
+This test is functionally identical to the example in
+valid_login.robot file.</doc>
+<status status="PASS" endtime="20170517 11:11:26.442" starttime="20170517 11:11:17.247"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Gherkin Login" pass="1">Gherkin Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
